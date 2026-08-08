@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان</title>
+<meta name="description" content="شرح مبسّط لمعيار اليونيكود وكيف يجعل الحروف المزخرفة تعمل بالنسخ واللصق في أي تطبيق، ولماذا تظهر بعض الرموز أحياناً كمربع فارغ على بعض الأجهزة.">
+<link rel="canonical" href="https://nickfinder.bio/blog/unicode-explained">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#7c3aed">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="نك فايندر">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:title" content="ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان">
+<meta property="og:description" content="شرح مبسّط لمعيار اليونيكود وكيف يجعل الحروف المزخرفة تعمل بالنسخ واللصق في أي تطبيق، ولماذا تظهر بعض الرموز أحياناً كمربع فارغ على بعض الأجهزة.">
+<meta property="og:url" content="https://nickfinder.bio/blog/unicode-explained">
+<meta property="og:image" content="https://nickfinder.bio/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="نك فايندر — زخرفة أسماء ورموز">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان">
+<meta name="twitter:description" content="شرح مبسّط لمعيار اليونيكود وكيف يجعل الحروف المزخرفة تعمل بالنسخ واللصق في أي تطبيق، ولماذا تظهر بعض الرموز أحياناً كمربع فارغ على بعض الأجهزة.">
+<meta name="twitter:image" content="https://nickfinder.bio/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=1e353498">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://nickfinder.bio/"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://nickfinder.bio/blog"}, {"@type": "ListItem", "position": 3, "name": "ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان", "item": "https://nickfinder.bio/blog/unicode-explained"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان", "description": "شرح مبسّط لمعيار اليونيكود وكيف يجعل الحروف المزخرفة تعمل بالنسخ واللصق في أي تطبيق، ولماذا تظهر بعض الرموز أحياناً كمربع فارغ على بعض الأجهزة.", "inLanguage": "ar-SA", "datePublished": "2026-08-08", "dateModified": "2026-08-08", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://nickfinder.bio/blog/unicode-explained"}, "author": {"@type": "Organization", "name": "نك فايندر", "url": "https://nickfinder.bio/"}, "publisher": {"@id": "https://nickfinder.bio/#org"}, "image": "https://nickfinder.bio/og.png"}</script>
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<script src="/assets/common.js?v=f94d7917" defer></script><header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="نك فايندر — الصفحة الرئيسية">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text">نك فايندر</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainnav"
+            aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+    <nav id="mainnav" class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="/fancy-text"><span aria-hidden="true">✨</span> زخرفة الأسماء</a><a href="/name-generator"><span aria-hidden="true">🎲</span> مولد الأسماء</a><a href="/symbols"><span aria-hidden="true">❦</span> الرموز</a><a href="/mix-names"><span aria-hidden="true">⚯</span> مزج اسمين</a><a href="/nicknames"><span aria-hidden="true">📚</span> أسماء جاهزة</a><a href="/blog" class="on"><span aria-hidden="true">📝</span> المقالات</a>
+    </nav>
+  </div>
+</header>
+<nav class="crumbs wrap" aria-label="مسار التنقل"><ol><li><a href="/">الرئيسية</a></li><li><a href="/blog">المقالات</a></li><li><span aria-current="page">ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان</span></li></ol></nav>
+<main id="main">
+<div class="wrap">
+  <div class="hero">
+    <h1>ما هو اليونيكود؟ ولماذا تعمل الأسماء المزخرفة في كل مكان</h1>
+    <p class="meta">مدة القراءة ٦ دقائق · آخر تحديث 2026-08-08</p>
+    <p class="sub">شرح مبسّط لمعيار اليونيكود وكيف يجعل الحروف المزخرفة تعمل بالنسخ واللصق في أي تطبيق، ولماذا تظهر بعض الرموز أحياناً كمربع فارغ على بعض الأجهزة.</p>
+  </div>
+  <nav class="toc" aria-label="محتويات المقال">
+    <p>محتويات المقال</p>
+    <ol><li><a href="#s1">المشكلة قبل اليونيكود</a></li><li><a href="#s2">كيف يعمل اليونيكود؟</a></li><li><a href="#s3">الحروف المزخرفة ليست خطوطاً</a></li><li><a href="#s4">لماذا يظهر المربع الفارغ؟</a></li><li><a href="#s5">المحارف المركّبة</a></li><li><a href="#s6">ماذا يعني هذا عملياً؟</a></li></ol>
+  </nav>
+  <article class="block prose">
+
+<p>كل مرة تنسخ فيها اسماً مزخرفاً وتلصقه في لعبة أو تطبيق فيظهر بنفس الشكل
+تماماً، فأنت تستفيد من واحد من أنجح المعايير التقنية في تاريخ الحوسبة. فهم
+كيفية عمله يجعلك تستخدم الزخرفة بذكاء أكبر.</p>
+
+<h2 id="s1">المشكلة قبل اليونيكود</h2>
+<p>في ثمانينيات وتسعينيات القرن الماضي، كان لكل لغة ترميزها الخاص. النص العربي
+كان يُخزَّن بترميز يختلف عن الروسي عن الياباني، وكانت النتيجة كارثية: تفتح ملفاً
+عربياً على حاسب غير معدّ له فتجد رموزاً عشوائية بلا معنى. من عاش تلك المرحلة
+يتذكّر مصطلح «الطلاسم» جيداً.</p>
+<p>المشكلة الأعمق أنه كان مستحيلاً كتابة نص يحتوي على العربية والصينية معاً في
+ملف واحد، لأن كل ترميز يستخدم نفس الأرقام لحروف مختلفة.</p>
+
+<h2 id="s2">كيف يعمل اليونيكود؟</h2>
+<p>حلّ اليونيكود المشكلة بفكرة بسيطة وطموحة: جدول واحد يضم كل حرف في كل لغة
+عرفتها البشرية، ولكل حرف رقم فريد يسمى «نقطة الترميز». الحرف A رقمه 65، والحرف
+العربي «م» رقمه 1605، والرمز ★ رقمه 9733.</p>
+<p>اليوم يضم اليونيكود أكثر من ١٤٩ ألف محرف تغطي ١٦٠ نظام كتابة، بينها لغات
+منقرضة كالهيروغليفية والمسمارية، وأنظمة كتابة معاصرة، وآلاف الرموز والإيموجي.</p>
+
+<h2 id="s3">الحروف المزخرفة ليست خطوطاً</h2>
+<p>هنا النقطة الجوهرية: الحرف 𝐀 ليس الحرف A بخط عريض، بل محرف مستقل تماماً له
+رقمه الخاص في اليونيكود (119808). هو حرف مختلف بقدر اختلاف A عن «م».</p>
+<p>ولهذا تعمل الزخرفة بالنسخ واللصق في أي مكان: أنت لا تنقل تنسيقاً قد يضيع، بل
+تنقل محارف حقيقية. التطبيق الذي يستقبلها لا يعرف أنها «مزخرفة»، بل يتعامل معها
+كأي نص عادي.</p>
+<p>هذا يفسّر أيضاً لماذا لا يمكن البحث عن اسم مزخرف بكتابة الاسم العادي: بالنسبة
+لمحرك البحث الداخلي في التطبيق، الكلمتان مختلفتان تماماً.</p>
+
+<h2 id="s4">لماذا يظهر المربع الفارغ؟</h2>
+<p>اليونيكود يحدّد رقم المحرف ومعناه، لكنه لا يرسمه. الرسم مهمة الخط (Font)
+المثبَّت على الجهاز. عندما يصادف جهازك محرفاً لا يوجد له شكل في أي خط مثبّت،
+يعرض مربعاً فارغاً يسمى «tofu» بين المطورين.</p>
+<p>هذا يعني أن ظهور المربع ليس خطأ في الاسم، بل نقص في خطوط الجهاز الذي يعرضه.
+ولذلك قد يظهر اسمك سليماً على هاتفك ومربعاً على هاتف صديقك. القاعدة العملية:
+كلما كان الرمز أشهر وأقدم في اليونيكود، زاد احتمال دعمه في كل مكان.</p>
+
+<h2 id="s5">المحارف المركّبة وحد الأحرف</h2>
+<p>بعض ما تراه كحرف واحد هو في الحقيقة عدة محارف متتالية. علامة التشكيل فوق
+الحرف محرف مستقل، والإيموجي الملوّن قد يتكوّن من خمسة محارف أو أكثر (علم دولة
+مثلاً هو حرفان إقليميان).</p>
+<p>هذه النقطة عملية جداً: عندما تقول لعبة إن الحد ١٢ حرفاً، فهي غالباً تعدّ
+المحارف لا الأحرف المرئية. اسم من ستة أحرف عربية مع علامة تشكيل على كل حرف
+يُحسب اثني عشر محرفاً — أي أنك بلغت الحد بالفعل.</p>
+
+<h2 id="s6">ماذا يعني هذا عملياً؟</h2>
+<ul>
+<li>الزخرفة تعمل في أي تطبيق يقبل نصاً، لأنها نص وليست تنسيقاً.</li>
+<li>الرموز الشائعة والقديمة أكثر أماناً من الرموز النادرة والحديثة.</li>
+<li>الاسم المزخرف يصعب البحث عنه، فاترك جزءاً منه بحروف عادية.</li>
+<li>حد الأحرف يُحسب بالمحارف، وعلامات التشكيل تستهلك منه.</li>
+<li>قارئات الشاشة تنطق المحارف المزخرفة بأسمائها التقنية، فتجنّبها في النصوص المهمة.</li>
+</ul>
+
+  </article>
+<div class="ad-slot" aria-hidden="true"></div>
+  <section class="block">
+    <h2>اقرأ أيضاً</h2>
+    <div class="related"><a href="/blog/how-to-decorate-arabic-names">كيف تُزخرف الأسماء العربية؟ الدليل التقني الكامل</a><a href="/blog/best-pubg-names">كيف تختار اسماً مميزاً في ببجي وفري فاير؟</a><a href="/blog/instagram-tiktok-names">زخرفة الاسم في انستقرام وتيك توك: ما يعمل وما لا يعمل</a><a href="/blog/symbols-history">من أين جاءت رموز ꧁ ༺ ☬ التي نراها في أسماء اللاعبين؟</a></div>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <div class="logo"><span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text">نك فايندر</span></div>
+      <p>موقع عربي مجاني لزخرفة الأسماء وتوليد الألقاب والرموز. كل الأدوات تعمل داخل
+      متصفحك مباشرة — بدون تسجيل، وبدون إرسال أي نص تكتبه إلى أي خادم.</p>
+    </div>
+    <nav class="foot-col" aria-label="الأدوات"><p class="foot-title">الأدوات</p><a href="/fancy-text">زخرفة النصوص والرموز</a><a href="/name-generator">مولد أسماء عشوائي</a><a href="/symbols-name">تحويل الاسم إلى رموز</a><a href="/cool-text">مولد النصوص المزخرفة</a><a href="/mix-names">دمج اسمين معاً</a><a href="/password-generator">مولد كلمات المرور</a><a href="/kaomoji">وجوه يابانية</a><a href="/domain-names">أسماء مواقع ونطاقات</a></nav>
+    <nav class="foot-col" aria-label="قوائم وأسماء"><p class="foot-title">قوائم وأسماء</p><a href="/boy-names">أسماء أولاد</a><a href="/girl-names">أسماء بنات</a><a href="/nicknames">دليل الأسماء الجاهزة</a><a href="/symbols">دليل الرموز</a></nav>
+    <nav class="foot-col" aria-label="روابط الموقع"><p class="foot-title">الموقع</p><a href="/about">من نحن</a><a href="/blog">المقالات</a><a href="/contact">اتصل بنا</a><a href="/privacy">سياسة الخصوصية</a><a href="/terms">الشروط والأحكام</a><a href="/cookies">سياسة ملفات الارتباط</a></nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 نك فايندر — جميع الحقوق محفوظة.</p>
+    <p class="foot-note">الأسماء المعروضة للاستخدام الشخصي والترفيهي، وقد تختلف طريقة
+    عرض بعض الرموز من جهاز لآخر ومن تطبيق لآخر.</p>
+  </div>
+</footer>
+</body>
+</html>
